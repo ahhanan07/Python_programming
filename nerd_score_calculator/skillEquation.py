@@ -3,8 +3,8 @@
 # Last Modified Date: 11th April 2019
 
 # Functionality: calculate the skill score by the equation
-# This file is exported to menu_30340284.py
-# fandom_score, hobbies_score, sports_played are inputs from menu_30340284.py
+# This file is exported to menu.py
+# fandom_score, hobbies_score, sports_played are inputs from menu.py
 # calculateSkillEquation() method is used to calculate the nerd score
 
 
