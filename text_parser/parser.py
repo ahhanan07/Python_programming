@@ -3,7 +3,7 @@
 # START DATE: 18-05-2019
 # LAST MODIFIED DATE: 24-05-2019
 import re
-import preprocessData_30340284
+import preprocessData
 
 
 class Parser:
@@ -16,7 +16,7 @@ class Parser:
     getId() : returns ID of the post. re.search() is used to extract number. Return value is an integer.
     getPostType(): returns postType() of the string.If postType is 1 means a question and if postType is 2 an answer.
     getDateQuarter(): returns the post date and quarter of the year in the format, yyyyQn e.g 2017Q2.
-    getCleanedBody(): pre processes the input string using preprocessLine function from preprocessData_30340284
+    getCleanedBody(): pre processes the input string using preprocessLine function from preprocessData
                       Output of this method is a cleaned body with no html tags and special characters.
     getVocabularySize(): takes each line and after being preprocessed removes the punctuations. The string is split and
                          total count of unique words are returned.
@@ -76,7 +76,7 @@ class Parser:
 
     def getCleanedBody(self):
         if self.if_parse() is True:  # checks for parse condition if true
-            return preprocessData_30340284.preprocessLine(self.inputString)  # returns clean body using preprocessLine()
+            return preprocessData.preprocessLine(self.inputString)  # returns clean body using preprocessLine()
         else:
             return None   # returns None if string cannot be parsed
 
@@ -87,7 +87,7 @@ class Parser:
             # line is stripped to remove redundant spaces, then converted to lower case and finally split into words.
             # set will consist of unique words of the line and its length  is returned
             # [^\w\s] will not consider words and whitespaces
-            return len(set(re.sub(r'[^\w\s]', '', preprocessData_30340284.preprocessLine(self.inputString)).
+            return len(set(re.sub(r'[^\w\s]', '', preprocessData.preprocessLine(self.inputString)).
                        strip().lower().split()))
         else:
             return None  # return none if not parsable
