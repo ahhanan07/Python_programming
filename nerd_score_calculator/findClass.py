@@ -2,8 +2,8 @@
 # Start Date: 30th March 2019
 # Last Modified Date: 11th April 2019
 
-# This file is exported to menu_30340284.py
-# studentScore_list is input from menu_30340284.py
+# This file is exported to menu.py
+# studentScore_list is input from menu.py
 # countStudentClass() method is used to determine the nerd class
 
 
