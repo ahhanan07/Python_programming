@@ -4,7 +4,7 @@
 # LAST MODIFIED DATE: 24-05-2019
 import re  # import regular expressions
 import matplotlib.pyplot as plt   # import matplotlib.pyplot for plotting
-import parser_30340284   # importing the parser_30340284.py file to be used here
+import parser   # importing the parser.py file to be used here
 
 '''
 %%%%%% docstring for Functions %%%%%%
@@ -24,7 +24,7 @@ def visualizeWordDistribution(inputFile,wordNumberDistribution):
     vocab_size = list()   # list to store vocab size of each line
     for line in range(0, len(inputList)):
         if re.search(r'Body', inputList[line]):  # searches for the string 'Body' in the line
-            v_object = parser_30340284.Parser(inputList[line])  # creating an object 'vo' for class Parser()
+            v_object = parser.Parser(inputList[line])  # creating an object 'vo' for class Parser()
             vocab_size.append(v_object.getVocabularySize())   # append vocab size of line into a list
         else:
             pass
