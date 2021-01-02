@@ -3,8 +3,8 @@
 # Last Modified Date: 11th April 2019
 
 # Importing files to be used in menu() function
-import skillEquation_30340284
-import findClass_30340284
+import skillEquation
+import findClass
 
 
 # define a function menu()
@@ -62,7 +62,7 @@ def menu():
                       "5. Print Nerd rating of student \n 6. Restart program \n 7. Exit program".
                       format(fandom_number, hobbies_score, sports_played))
 
-            # Calculation of NerdScore by importing nerdScore_30340284.py
+            # Calculation of NerdScore by importing nerdScore.py
             # calculateSkillEquation () method from skillEquation.py is used to calculate the nerd score.
             # Fandom score, hobbies score and sports played variables are passed into the calculateSkillEquation ()
 
@@ -70,7 +70,7 @@ def menu():
 
                 if fandom_number is not None and hobbies_score is not None and sports_played is not None:
                     print("Nerd Score is : {}".
-                          format(skillEquation_30340284.calculateSkillEquation(fandom_number, hobbies_score, sports_played)))
+                          format(skillEquation.calculateSkillEquation(fandom_number, hobbies_score, sports_played)))
                 if fandom_number is None:
                     print("Fandom score missing\n")
                 if hobbies_score is None:
@@ -78,7 +78,7 @@ def menu():
                 if sports_played is None:
                     print("Number of sports played is missing\n")
 
-            # Multiple NerdScores are taken and their class is determined by importing findClass_30340284.py
+            # Multiple NerdScores are taken and their class is determined by importing findClass.py
             # A variable class_list is defined which stores different nerd classes in the form of list
             # Method countStudentClass () is used to determine the classes based on input studentScore_list
             # Finally, the method output is zipped with class_list and displayed as a dictionary using dict () function
@@ -87,7 +87,7 @@ def menu():
                 student_scores = input("Input nerd scores separated by spaces\n")
                 studentScore_list = student_scores.split()
                 class_list = ["Nerdlite", "Nerdling", "Nerdlinger", "Nerd", "Nerdington", "Nerdrometa", "Nerd Supreme"]
-                nerdlist = findClass_30340284.countStudentClass(studentScore_list)
+                nerdlist = findClass.countStudentClass(studentScore_list)
                 if nerdlist == 0:
                     pass
                 else:
