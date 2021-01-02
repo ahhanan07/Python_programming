@@ -5,8 +5,9 @@ Implementation of a basic parser to investigate the natural-language posts from 
 ## Python libraries required:
 
 RE
-Pandas
-Data and Files Overview
+Pandas 
+
+## Data and Files Overview
 data.xml: An XML file with 10.700 questions and answers from Stack Overflow about hardware.
 
 preprocessData.py: Module of Data pre-processing: Defines one function of pre-processing and one function to read the data, pre-process it and save .txt files with the answers and questions from all posts in .xml file.
